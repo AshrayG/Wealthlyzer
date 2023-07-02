@@ -23,8 +23,12 @@ const loginController = async(req,res) => {
 //register
 const registerController = async(req,res) => {
     try{
-        const newUser = new userModel(req.body)
-        await newUser.save()
+        const newUser = new userModel(req.body);
+        await newUser.save(),
+        res.status(2).json({
+            success: true,
+            newUser,
+        })
     }
     catch(error){
         res.status(400).json({
