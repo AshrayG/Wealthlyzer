@@ -1,6 +1,7 @@
 import React from 'react'
 import {Form,Input} from 'antd'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 const Register = () => {
     const submitHandler = (values) => {
@@ -10,7 +11,7 @@ const Register = () => {
     <>
       <div className='register-page'>
         <Form layout='vertical' onFinish={submitHandler}>
-            <h1>Registeration Form</h1>
+            <h1>Registration Form</h1>
             <Form.Item label='Name' name='name'>
                 <Input/>
             </Form.Item>            
