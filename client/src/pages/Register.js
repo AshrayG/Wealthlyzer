@@ -21,7 +21,7 @@ const Register = () => {
       }
     }
   useEffect(()=> {
-    if(localStorage.getItem("user")){
+    if(localStorage.getItem('user')){
         navigate('/')
     }
   },[navigate])
